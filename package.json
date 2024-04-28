@@ -1,9 +1,7 @@
 {
   "name": "@rad-team/react-neshan-map-leaflet",
-
   "description": "⚛️ React component for 🍃 Neshan Leaflet map.",
   "version": "1.2.1",
-  "private": false,
   "main": "dist/NeshanMap.js",
   "module": "dist/NeshanMap.js",
   "babel": {
