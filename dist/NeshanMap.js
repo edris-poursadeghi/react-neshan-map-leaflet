@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import neshan_map_loader from "./loaders/neshan_map_loader";
-
 const NeshanMap = props => {
   const {
     style,
@@ -26,7 +25,8 @@ const NeshanMap = props => {
   useEffect(() => {
     neshan_map_loader({
       onLoad: () => {
-        let map = new window.L.Map(mapEl.current, { ...defaultOptions,
+        let map = new window.L.Map(mapEl.current, {
+          ...defaultOptions,
           ...options
         });
         if (onInit) onInit(window.L, map);
@@ -38,10 +38,10 @@ const NeshanMap = props => {
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     ref: mapEl,
-    style: { ...defaultStyle,
+    style: {
+      ...defaultStyle,
       ...style
     }
   });
 };
-
 export default NeshanMap;

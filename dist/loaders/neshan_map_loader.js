@@ -15,12 +15,10 @@ export default (props => {
       document.head.appendChild(style);
     } //------import script
 
-
     if (window.L) {
       if (onLoad) onLoad();
       return;
     }
-
     const script = document.body.querySelector(`script[src="${DEFAULT_URL_SCRIPT}"]`) || document.createElement("script");
     script.addEventListener("load", () => {
       if (onLoad) onLoad();
@@ -30,12 +28,10 @@ export default (props => {
       if (onError) onError();
       return;
     });
-
     if (!script.src) {
       script.src = DEFAULT_URL_SCRIPT;
       document.body.appendChild(script);
     }
   };
-
   return createScriptStyle();
 });

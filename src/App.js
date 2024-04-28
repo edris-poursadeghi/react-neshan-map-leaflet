@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <NeshanMap
         options={{
-          key: 'YOUR_API',
+          key: 'web.YPxFbDFt9ZSJ71EwC3t8p6HQBgeYwnKfLG6xftri',
           center: [35.699739, 51.338097],
           zoom: 13
         }}
